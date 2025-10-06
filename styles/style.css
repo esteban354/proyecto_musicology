@@ -1,0 +1,265 @@
+:root {
+    --naranja: #ff6309;
+    --gray: #2c2c2c;
+    --titulos: 'Oswald', sans-serif;
+    --textos: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--titulos);
+}
+
+p{
+    font-family: var(--textos);
+    font-size: 20px;
+    font-weight: 100;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 1px solid red;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--gray);
+    padding: 10px 40px;
+    align-items: center;
+}
+
+header img:first-child{
+    width: 5%;
+    min-width: 100px;
+}
+
+header img:last-child{
+    width: 30px;
+    cursor: pointer;
+}
+
+.musicology{
+    background-image: url("../assets/images/background.png");
+    height: 90vh;
+    background-size: cover;      
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 8vh 12vh;
+    color: white;
+}
+
+.musicology h1{
+    font-size: 15vh;
+    font-weight: 300;
+}
+
+.musicology p{
+    width: 40%;
+    font-size: 18px;
+}
+
+.musicology button{
+    background-color: var(--naranja);
+    padding: 15px 35px;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.musicology button:hover{
+    background-color: #ff7a2e;
+}
+
+.dance_tour, .pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    color: white;
+}
+
+.dance_tour {
+    background-color: var(--naranja);
+    padding: 10vh 5vh;
+}
+
+.pricing {
+    background-color: var(--gray);
+    padding: 10vh 5vh;
+}
+
+.dance_tour h2, .pricing h2 {
+    font-size: 6vh;
+    font-weight: 700;
+}
+
+.dance_tour > p, .pricing > p {
+    max-width: 700px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.dance_tour > div, .pricing > div {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.dance_tour > div img {
+    width: 100%;
+}
+
+.dance_tour > div article, .pricing > div article {
+    width: 32%;
+    transition: transform 0.3s ease;
+}
+
+.dance_tour > div article {
+    background-color: var(--gray);
+}
+
+.pricing > div article {
+    background-color: var(--naranja);
+    text-align: center;
+    width: 28%;
+    padding: 50px 0px 0px 0px;
+}
+
+.dance_tour > div article:hover, .pricing > div article:hover {
+    transform: translateY(-10px);
+}
+
+.dance_tour > div article div, .pricing > div article div {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.dance_tour > div article div h3, .pricing > div article div h3 {
+    font-size: 3.5vh;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+.dance_tour > div article div p {
+    font-size: 18px;
+}
+
+.pricing > div article div p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.pricing > div article div .price {
+    background-color: var(--gray);
+    padding: 15px 20px;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 600;
+    border: none;
+    color: white;
+    font-size: 3vh;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pricing > div article div .price:hover {
+    background-color: #1a1a1a;
+}
+
+.pricing > div article img {
+    width: 100%;
+    max-width: 90px;
+}
+
+footer{
+    background-color: var(--naranja);
+    text-align: center;
+}
+
+footer > p{
+    color: white;
+    padding: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+}
+
+
+@media (max-width: 1279px) {    
+    .musicology{
+        padding: 3vh;
+        height: 50vh;
+        background-position: right;
+    }
+
+    .musicology h1{
+        font-size: 10vh;
+    }
+
+    .dance_tour > div, .pricing > div{
+        flex-wrap: wrap;
+    }
+
+    .dance_tour > div article, .pricing > div article{
+        width: 40%;
+    }
+
+    .dance_tour h2, .pricing h2{
+        font-size: 5vh;
+    }
+
+    .dance_tour > div article div h3, .pricing > div article div h3{
+        font-size: 2.6vh;
+    }
+
+    .pricing > div article div .price{
+        font-size: 2vh;
+    }
+}
+
+@media (max-width: 920px){
+    .musicology{
+        height: 67vh;
+    }
+
+    .musicology p{
+        width: 100%;
+    }
+
+    .dance_tour > div article div h3, .pricing > div article div h3{
+        font-size: 3vh;
+    }
+
+    .pricing > div article div .price{
+        font-size: 3vh;
+    }
+}
+
+@media (max-width: 768px){
+    .dance_tour > div article, .pricing > div article{
+        width: 70%;
+    }   
+}
+
+@media (max-width: 480px){
+    .musicology h1{
+        font-size: 9vh;
+    }
+
+    .dance_tour > div article, .pricing > div article{
+        width: 90%;
+    }
+}
